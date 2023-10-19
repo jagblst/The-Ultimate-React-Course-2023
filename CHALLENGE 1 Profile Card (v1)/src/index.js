@@ -8,11 +8,48 @@ function App() {
       <Avatar />
       <div className="data">
         <Intro />
-        {/* Should contain one Skill component
-        for each web dev skill that you have,
-        customized with props */}
         <SkillList />
       </div>
+    </div>
+  );
+}
+
+function Avatar() {
+  return (
+    <img className="avatar" src="stickers-heisenberg.jpg" alt="avatar-img" />
+  );
+}
+
+function Intro() {
+  return (
+    <div>
+      <h1>Jaga Lysyi Boroda</h1>
+      <p>
+        {" "}
+        Future full-stack web developer. When not coding or learning English, I
+        like to play football, board games, or to just enjoy the sun at the
+        beach.
+      </p>
+    </div>
+  );
+}
+
+function SkillList() {
+  return (
+    <div className="skill-list">
+      <Skill skill="HTML + CSS" emoji="👍🏼" color="orangered" />
+      <Skill skill="JavaScript" emoji="✌🏼" color="yellow" />
+      <Skill skill="React" emoji="💪🏼" color="#61DBFB" />
+      <Skill skill="Git and GitHub" emoji="🤝" color="grey" />
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
     </div>
   );
 }
