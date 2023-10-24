@@ -1,13 +1,17 @@
 {
-  "name": "react-exercise-flashcards-starter",
+  "name": "react",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
   "main": "src/index.js",
   "dependencies": {
+    "loader-utils": "3.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-scripts": "4.0.0"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
