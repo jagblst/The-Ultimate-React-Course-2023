@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const tempMovieData = [
   {
@@ -50,11 +50,19 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-export default function App() {
-  const [movies, setMovies] = useState(tempMovieData);
-  const [watched, setWatched] = useState(tempWatchedData);
+const KEY = "d6553f75";
 
-  return (
+export default function App() {
+  const [movies, setMovies] = useState([]);
+  const [watched, setWatched] = useState([]);
+
+  useEffect(function () {
+    fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=interstellar`)
+      .then((res) => res.json())
+      .then((data) => setMovies(data.Search));
+  }, []);
+
+  http: return (
     <>
       <NavBar>
         <Logo />
@@ -62,6 +70,7 @@ export default function App() {
         <NumResults movies={movies} />
       </NavBar>
       <Main>
+        {/*
         <Box element={<MovieList movies={movies} />} />
         <Box
           element={
@@ -71,7 +80,7 @@ export default function App() {
             </>
           }
         />
-        {/*
+       */}
         <Box>
           <MovieList movies={movies} />
         </Box>
@@ -79,7 +88,6 @@ export default function App() {
           <WatchedSummary watched={watched} />
           <WatchedMovieList watched={watched} />
         </Box>
-        */}
       </Main>
     </>
   );
@@ -123,7 +131,7 @@ function Main({ children }) {
   return <main className="main">{children}</main>;
 }
 
-function Box({ element }) {
+function Box({ children }) {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -131,7 +139,7 @@ function Box({ element }) {
       <button className="btn-toggle" onClick={() => setIsOpen((open) => !open)}>
         {isOpen ? "–" : "+"}
       </button>
-      {isOpen && element}
+      {isOpen && children}
     </div>
   );
 }
