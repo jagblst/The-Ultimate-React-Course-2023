@@ -27,13 +27,10 @@ function City() {
 
   return (
     <h1>
-      {(cityName, emoji, date, notes)} City {id}
+      City {id}
       <p>
         Position: {lat}, {lng}
       </p>
-      <button onClick={() => setSearchParams({ lat: 23, lng: 50 })}>
-        Change pos
-      </button>
     </h1>
   );
   //   return (
