@@ -37,18 +37,6 @@
       "id": 98443197
     },
     {
-      "cityName": "Alkmaar",
-      "country": "Netherlands (the)",
-      "emoji": "🇳🇱",
-      "date": "2023-11-22T11:23:24.323Z",
-      "notes": "test",
-      "position": {
-        "lat": "52.65639394198803",
-        "lng": "4.768066406250001"
-      },
-      "id": 98443198
-    },
-    {
       "cityName": "Nice",
       "country": "France",
       "emoji": "🇫🇷",
@@ -71,30 +59,6 @@
         "lng": "12.48046875"
       },
       "id": 98443200
-    },
-    {
-      "cityName": "Durres",
-      "country": "Albania",
-      "emoji": "🇦🇱",
-      "date": "2023-11-22T11:33:52.200Z",
-      "notes": "fff",
-      "position": {
-        "lat": "41.3108238809182",
-        "lng": "19.511718750000004"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Athens",
-      "country": "Greece",
-      "emoji": "🇬🇷",
-      "date": "2023-11-11T11:36:52.000Z",
-      "notes": "dfdf",
-      "position": {
-        "lat": "37.92686760148135",
-        "lng": "23.774414062500004"
-      },
-      "id": 98443202
     }
   ]
 }
